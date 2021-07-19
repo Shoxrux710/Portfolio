@@ -1,0 +1,701 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.preloader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 800;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+}
+.loader4{
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+.loader{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.loader1, .loader2, .loader3{
+    position: absolute;
+    border: 4px solid transparent;
+    border-radius: 50%;
+}
+.loader1{
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border: 5px solid white;
+   border-top-color: red;
+   border-bottom-color: red;
+   animation: topin 2.5s linear 20;
+}
+.loader2{
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   border: 5px solid transparent;
+   border-top-color: red;
+   border-bottom-color: red;
+   top: 15px;
+   left: 15px;
+   animation: topon 2.5s linear 20;
+}
+.loader3{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* border: 5px solid red; */
+    /* border-top-color: white;
+    border-bottom-color: white; */
+    top: 25px;
+    left: 25px;
+    background: white;
+}
+@keyframes topin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes topon{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+
+/* ========================= header_starting ============================ */
+header {
+    background: url('../rasm/portfolio/pexels-junior-teixeira-2047905.jpg') no-repeat center center;
+    background-position: center;
+    /* backdrop-filter: blur(3px); */
+    /* padding: 40px 0 190px; */
+    /*  overflow: hidden;
+    position: relative; */
+    background-size: cover;
+    /* background-attachment: fixed; */
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;  
+}
+header .header_top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px white;
+    z-index: 5;
+}
+header .header_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    
+}
+
+header .header_nav ul{
+    position: fixed;
+    height: 100vh;
+    width: 240px;
+    background: black;
+    top: 0;
+    right: -260px;
+    z-index: 1;
+    padding: 15px;
+}
+header .header_nav .times{
+    display: flex;
+    display: block;
+    align-self: flex-end;
+    color: white;
+    font-size: 28px;
+    margin-bottom: 50px; 
+    cursor: pointer;
+}
+header .header_nav ul li a{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+}
+header .header_nav ul li a .fa{
+    color: red;
+    margin-right: 20px;
+}
+header .header_nav ul li{
+    margin-bottom: 20px;
+}
+header .header_nav .bar{
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;  
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    background: rgba(0, 0, 0, 0.596);
+    cursor: pointer;
+}
+header .header_nav .navbar-brand{
+    color: white;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;  
+}
+header .header_nav ul li a.active{
+    color: red;
+}
+header .icon{
+    position: fixed;
+    right: 2%;
+    bottom: 4%;
+    background: black;
+    /* padding: 4px; */
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    border-radius: 4px;
+    z-index: 10;
+}
+
+header .icon a {
+    text-decoration: none;
+}
+
+header .icon .fa {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+header .bottom {
+    position: absolute;
+    top: 38%;
+    left: 5%;
+    /* text-align: center; */
+}
+
+header .bottom h3 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+}
+
+header .bottom h3 span {
+    font-weight: 700;
+}
+
+header .bottom p {
+    font-size: 45px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+header .bottom .fa {
+    width: 42px;
+    height: 42px;
+    font-size: 42px;
+    border: 0px solid;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #777777;
+    color: white;
+    /* margin-top: 18px; */
+    transition: 500ms;
+}
+
+header .bottom .fa:hover {
+    box-shadow: 0px 0px 25px #777777;
+}
+/* ======================== ABOUT_STARTING ======================== */
+.about{
+   padding: 80px 0;
+}
+.about h1{
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+.about h1 span{
+    font-weight: 700;
+}
+.about img{
+    height: 300px;
+}
+.about p:nth-of-type(1){
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.about p:nth-of-type(2){
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: 400;
+    color: black;
+    margin: 0;
+}
+/* ========================== skill_starting =================== */
+.skill {
+    background: url('../rasm/portfolio/10-rasm.png') no-repeat center;
+    background-position: center;
+    padding: 80px 0 80px;
+    /* padding: 40px 0 190px; */
+    /*  overflow: hidden;
+         position: relative; */
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.skill h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+.skill h2{
+    color: white;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 700;
+    margin: 0;
+    border-bottom: 5px solid white;
+    width: 50%;
+    padding-bottom: 10px;
+    /* margin-bottom: 30px; */
+}
+.skill p{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+.skill .swiper-slide{
+    text-align: center;
+}
+.skill .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.skill .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 260px;
+    transition: 0.5s;
+}
+.skill .swiper-slide::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(165, 42, 42, 0.472);
+    transform: scale(0);
+    transition: 0.5s;
+}
+.skill .swiper-slide:hover::before{
+    transform: scale(1);
+}
+.skill img{
+    width: 100%;
+    height: 230px;
+}
+
+
+
+/* ========================= project_starting ===================== */
+.project {
+    background: url('../rasm/portfolio/pexels-junior-teixeira-2047905.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 0 70px;
+    overflow: hidden;
+}
+.project .card img {
+    height: 300px;
+    border: 2px solid #d6d6d6;
+    transition: 1s;
+    transform: scale(1);
+    opacity: 0.8;
+}
+
+.project .card img:hover {
+    transform: scale(1.4);
+
+}
+.project .card:hover img{
+    opacity: 1;
+}
+
+.project .col-md-6 {
+    margin: 0 auto 30px;
+}
+.project .card {
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+    border: none;
+}
+.project .card::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: -100%;
+    background: rgba(0, 0, 0, 0.555);
+    border-bottom: 4px solid red;
+    transition: 0.5s;
+    z-index: 1;
+}
+.project .card::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, 0.555);
+    border-top: 4px solid red;
+    transition: 0.5s;
+    z-index: 1;
+}
+.project .project_name{
+    position: absolute;
+    text-align: center;
+    top: -100%;
+    left: 0;
+    right: 0;
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    transition: 0.5s;
+    z-index: 2;
+}
+.project .project_link{
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left:0;
+    right: 0;
+    transition: 0.5s;
+    z-index: 2;
+}
+.project .card:hover::before{
+    top: -70%;
+}
+.project .card:hover::after{
+    top: 50%;
+}
+.project .card:hover .project_name{
+    top: 5%;
+}
+.project .card:hover .project_link{
+    top: 55%;
+}
+.project .project_link p{
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 30px;
+}
+.project .project_link p .fa{
+    color: red;
+    font-size: 30px;
+}
+.project .project_link a{
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 2px;
+    transition: 0.5s;
+}
+.project .project_link a:hover{
+    color: red;
+    border: 2px solid red;
+}
+.project h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    margin: 0;
+    margin-bottom: 40px;
+}
+/* ====================== resume_starting ==================== */
+.resume {
+    background: url('../rasm/portfolio/brand_02.jpg');
+    padding: 80px 0;
+    
+}
+.resume .col-lg-9{
+    margin: auto;
+}
+.resume .name_info{
+    background: black;
+    padding: 20px;
+}
+.resume h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0;
+    color: black;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.resume h3{
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
+.resume  img {
+    height: 130px;
+    border: 2px solid white;
+}
+.resume .name{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.resume .last_name{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.534);
+    margin-bottom: 30px;
+    padding-bottom: 6px;
+}
+.resume p:nth-of-type(2){
+    color:white;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+.resume p:nth-of-type(1){
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    width: 60%;
+}
+/* ================== contact_starting ================== */
+.contact{
+    background: black;
+    padding: 80px 0 50px;
+}
+.contact h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.contact h1 span{
+    font-weight: 700;
+}
+.contact a{
+    text-align: center; 
+    text-decoration: none;
+    transition: 1s;
+}
+.contact .col-lg-6{
+   margin-bottom: 60px;
+}
+.contact .col-md-6{
+   margin-bottom: 30px;
+}
+.contact .fa{
+    color: white;
+    font-size: 70px;
+    display: block;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.contact .contact_info{
+    color: black;
+    font-size: 24px;
+    font-weight: 900;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    background: white;
+    border-radius: 30px;
+    padding: 5px 0;
+}
+.contact .contact_one{
+    color: black;
+    font-size: 24px;
+    font-weight: 900;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    background: white;
+    border-radius: 30px;
+    padding: 5px 0;
+}
+.contact .contact_info{
+    opacity: 0;
+    transition: 1s;
+}
+.contact a:hover .contact_info{
+    opacity: 1;
+}
+/* ============================ media_starting ==================== */
+@media(max-width: 991px) {
+    .about img{
+        height: 240px;
+    }
+    .resume p:nth-of-type(1){
+        width: 50%;
+    }
+}
+
+@media(max-width: 767px) {
+    header .bottom h3 {
+        font-size: 45px;
+    }
+    header .bottom p {
+        font-size: 35px;
+    }
+    .about h1{
+        margin-bottom: 60px; 
+    }
+    .skill .swiper-slide {
+        width: 180px;
+        height: 220px;
+    }
+    .skill img {
+        height: 180px;
+    }
+    .resume p:nth-of-type(1){
+        width: 42%;
+    }
+
+}
+
+@media(max-width: 575px) {
+    header{
+        height: 650px;
+    }
+    header .bottom h3 {
+        font-size: 36px;
+    }
+    header .bottom p {
+        font-size: 30px;
+    }
+    header .bottom{
+        top: 30%;
+        left: 5%;
+    }
+    .about img{
+        height: 160px;
+    }
+    .about{
+        padding: 50px 0;
+     }
+     .about p:nth-of-type(1){
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    .project .card img {
+        height: 220px;
+    }
+    .resume p:nth-of-type(2){
+        font-size: 17px;
+    }
+    .resume p:nth-of-type(1){
+        font-size: 17px;
+    }
+    .resume h3{
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .resume  img {
+        height: 100px;
+        border: 2px solid white;
+    }
+    .resume .name{
+        margin-bottom: 30px;
+    }
+    .resume .name_info{
+        padding: 10px;
+    }
+    .resume .last_name{
+        /* display: flex;
+        flex-direction: column; */
+        margin-bottom: 20px;
+        padding-bottom: 4px;
+    }
+    .skill .swiper-slide {
+        width: 130px;
+        height: 150px;
+    }
+    .skill img {
+        height: 130px;
+    }
+    .skill p{
+        font-size: 24px;
+    }
+    .contact .fa{
+        font-size: 55px;
+    }
+    .contact .contact_info{
+        font-size: 16px;
+    }
+    .contact .contact_one{
+        font-size: 16px;
+        
+    }
+   
+}

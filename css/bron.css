@@ -1,0 +1,806 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas';
+}
+
+.preloader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 800;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+}
+.loader4{
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+.loader{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.loader1, .loader2, .loader3{
+    position: absolute;
+    border: 4px solid transparent;
+    border-radius: 50%;
+}
+.loader1{
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border: 5px solid white;
+   border-top-color: red;
+   border-bottom-color: red;
+   animation: topin 2.5s linear 20;
+}
+.loader2{
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   border: 5px solid transparent;
+   border-top-color: red;
+   border-bottom-color: red;
+   top: 15px;
+   left: 15px;
+   animation: topon 2.5s linear 20;
+}
+.loader3{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* border: 5px solid red; */
+    /* border-top-color: white;
+    border-bottom-color: white; */
+    top: 25px;
+    left: 25px;
+    background: white;
+}
+@keyframes topin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes topon{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+/* ================== header_starting ===================== */
+header .header_top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 10px 0 10px;
+    z-index: 5;
+}
+header .header_top .header_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header_top .header_nav .list{
+    display: flex;
+}
+header .header_top .header_nav ul{
+    display: flex;
+    margin: 0;
+}
+header .header_top .header_nav ul li a{
+    color: #0f0f0f;
+    font-family: 'Bebas';
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0px 12px;
+}
+header .header_top .header_nav .bar , .header_top .header_nav .times{
+    display: none;
+}
+header .header_top .header_nav ul li a.active{
+    color: cyan;
+}
+header .header_top .hotel h2 {
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 700;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    padding: 0;
+}
+header .header_top .box{
+    position: fixed;
+    top: 225px;
+    right: 0;
+    width: 50px;
+    height: 150px;
+    z-index: 1;
+    background: #334377;
+}
+header .header_top .hotel h1 {
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 700;
+    color: #4e26fd;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+header .header_top a {
+    text-decoration: none;
+}
+header .header_top .hotel img {
+    margin-left: -30px;
+}
+
+header .header .col-lg-8 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+header .header .col-lg-4 {
+    padding: 0px;
+}
+
+/* ==================== main_starting ================= */
+main {
+    background: white;
+    padding-bottom: 103px;
+}
+
+main ul li a {
+    color: #000000;
+    font-family: "Open Sans";
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+    transition: 500ms;
+
+}
+
+main ul li {
+    background: white;
+    width: 200px;
+    padding: 17px 0 17px 17px;
+    transition: 500ms;
+}
+
+main ul li:hover {
+    background: #4e26fd;
+
+}
+
+main ul li a:hover {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+main ul {
+    background: black;
+    padding: 32px 33px 32px 33px;
+}
+
+main .col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h3 {
+    color: #000000;
+    font-family: "Bebas Neue Bold";
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+main h4 {
+    color: #010101;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+main p {
+    color: #010101;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+button {
+    color: #4e26fd;
+    font-family: 'Bebas';
+    font-size: 24px;
+    font-weight: 400;
+    background: none;
+    text-transform: uppercase;
+    padding: 14px 57px 17px 57px;
+    border: 2px solid #4e26fd;
+}
+
+main h1 {
+    font-family: "Bebas Neue Bold";
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 70px;
+    margin-top: -145px;
+    margin-bottom: 35px;
+}
+
+main .you {
+    font-family: "Bebas Neue Bold";
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+    font-size: 50px;
+    text-align: start;
+    margin-bottom: 70px;
+}
+
+/* ================ winter_starting =========== */
+.winter .col-lg-3 {
+    padding: 0;
+}
+
+.winter .active .text {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+}
+
+.winter .active {
+    position: relative;
+}
+
+.winter .active h3 {
+    color: #ffffff;
+    font-family: "Bebas Neue Bold";
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.winter .active p {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.winter .active img {
+    height: auto;
+}
+
+.winter h1 {
+    color: #000000;
+    font-family: "Bebas Neue Bold";
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+/* ===================== room_starting ================ */
+.room {
+    background: white;
+    padding: 100px 0 95px;
+}
+
+.room h1 {
+    color: #000000;
+    font-family: "Bebas Neue Bold";
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.room .col-lg-10 {
+    margin: auto;
+}
+
+.room h3 {
+    color: #010101;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.room p {
+    color: #010101;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0;
+}
+
+.room .col-lg-6 .lorem {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.room .col-lg-6 h3 {
+    text-align: center;
+}
+
+.room .image .bot img {
+    margin-top: 25px;
+}
+
+/* ======================== snow_starting ================= */
+.snow {
+    background: url('../rasm/images/Layer 8.jpg') no-repeat center center / cover;
+    background-position: center;
+    padding: 110px 0 54px;
+}
+
+.snow h1 {
+    color: #ffffff;
+    font-family: "Bebas Neue Bold";
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 90px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.snow p {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.snow button {
+    color: #ffffff;
+    font-family: Bebas;
+    font-size: 17px;
+    font-weight: 400;
+    background: #4e26fd;
+    border: none;
+    padding: 18px 63px 18px 63px;
+}
+
+/* ================== from_starting =========== */
+.from {
+    background: white;
+    padding: 100px 0 75px;
+}
+
+.from h1 {
+    color: black;
+    font-family: "Bebas Neue Bold";
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 75px;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.from h3 {
+    color: #010101;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.from p {
+    color: #010101;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+    line-height: 24px;
+    margin-bottom: 55px;
+}
+
+/* ==================== footer_starting ================ */
+footer {
+    background: #252525;
+    padding: 34px 0 40px;
+}
+
+footer .foot {
+    margin-bottom: 22px;
+}
+
+footer .foot h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+footer .foot h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #4e26fd;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+footer .foot img {
+    margin-left: -30px;
+}
+
+footer .street ul li a {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 300
+}
+
+footer .street ul li .fa {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+footer .street ul li {
+    margin-bottom: 18px;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+footer .home ul li a {
+    color: #ffffff;
+    font-family: "Bebas Neue Bold";
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+footer .icons a {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer .icons .icon {
+    margin-top: 25px;
+}
+
+footer .icons .fa {
+    color: white;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms;
+}
+
+footer .icons .fa:hover {
+    color: #4e26fd;
+    border: 1px solid #4e26fd;
+}
+
+footer ul li {
+    margin: 0;
+}
+
+footer .home ul li {
+    margin-bottom: 10px;
+}
+
+/* ===================== media_starting ==================== */
+@media(max-width: 1199px) {
+    main ul li {
+        width: 160px;
+    }
+}
+
+@media(max-width: 991px) {
+    header .header_top .header_nav ul {
+        position: fixed;
+        top: 0;
+        right: -220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 4;
+        padding: 20px;
+    }
+  
+    header .header_top .header_nav .list .bar{
+        display: block;
+        color:black;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    header .header_top .header_nav ul .times{
+        display: block;
+        color: white;
+        font-size: 24px;
+        align-self: flex-start;
+        margin-bottom: 15px;
+    }
+    header .header_top .header_nav ul li a{
+        color: white;
+    }
+    header .header_top .header_nav ul li{
+        margin-bottom: 13px;
+    }
+    main h1 {
+        font-size: 50px;
+        margin-bottom: 60px;
+    }
+
+    main .you {
+        font-size: 40px;
+
+    }
+
+    main ul li {
+        width: 120px;
+    }
+
+    main h3 {
+        font-size: 38px;
+    }
+
+    .winter h1 {
+        font-size: 38px;
+    }
+
+    .room h1 {
+        font-size: 38px;
+    }
+
+    .from h1 {
+        font-size: 65px;
+    }
+
+    .room .image {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .room .image .bot img {
+        margin-top: 0px;
+    }
+
+    .room .col-lg-6 {
+        margin: auto;
+    }
+
+    .room .image .col-lg-12 {
+        margin-bottom: 40px;
+    }
+
+    .room h3 {
+        text-align: center;
+    }
+
+    .room p {
+        text-align: center;
+    }
+
+    .snow h1 {
+        font-size: 70px;
+    }
+
+    .from .col-lg-4 {
+        margin: auto;
+    }
+
+    .from h3 {
+        text-align: center;
+    }
+
+    .from p {
+        text-align: center;
+    }
+
+    footer .icons a {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 767px) {
+    main h1 {
+        display: none;
+    }
+
+    main .you {
+        display: none;
+    }
+
+    main ul {
+        margin-top: 30px;
+        padding: 20px 20px 20px 20px;
+    }
+
+    main ul li a {
+        font-size: 14px;
+    }
+
+    main ul li {
+        width: 90px;
+    }
+
+    main ul li a:hover {
+        text-decoration: none;
+        font-size: 13px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    main ul li {
+        padding: 14px 0 14px 10px;
+    }
+
+    main h3,
+    .winter h1,
+    .room h1 {
+        font-size: 30px;
+    }
+
+    button {
+        color: #4e26fd;
+        font-family: 'Bebas';
+        font-size: 18px;
+        font-weight: 400;
+        background: none;
+        text-transform: uppercase;
+        padding: 10px 45px 10px 45px;
+        border: 2px solid #4e26fd;
+    }
+
+    .snow h1 {
+        font-size: 50px;
+    }
+
+    .snow button {
+        padding: 14px 50px 14px 50px
+    }
+
+    .from h1 {
+        font-size: 40px;
+    }
+
+    footer .icons {
+        margin: auto;
+    }
+
+    footer .icons a {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .col-lg-12 .foot {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media(max-width: 575px) {
+    .header .col-lg-4 {
+        display: none;
+    }
+
+    main ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main ul li {
+        margin-bottom: 10px;
+    }
+
+    main .book {
+        margin: auto;
+    }
+
+    main ul li a:hover {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    main ul li:hover {
+        width: 80%;
+    }
+
+    main h3,
+    .winter h1,
+    .room h1 {
+        font-size: 25px;
+    }
+
+    main .col-lg-4 {
+        margin: auto;
+    }
+
+    button {
+        color: #4e26fd;
+        font-family: 'Bebas';
+        font-size: 14px;
+        font-weight: 400;
+        background: none;
+        text-transform: uppercase;
+        padding: 8px 30px 8px 30px;
+        border: 2px solid #4e26fd;
+    }
+    .room .image{
+        margin: auto;
+    }
+    .snow h1{
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .snow button{
+        padding: 10px 30px 10px 30px;
+    }
+    .from h1{
+        font-size: 30px;
+    }
+    .header_top .box{
+        display: none;
+    }
+}

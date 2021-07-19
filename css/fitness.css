@@ -1,0 +1,825 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.preloader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 800;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+}
+.loader4{
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+.loader{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.loader1, .loader2, .loader3{
+    position: absolute;
+    border: 4px solid transparent;
+    border-radius: 50%;
+}
+.loader1{
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border: 5px solid white;
+   border-top-color: red;
+   border-bottom-color: red;
+   animation: topin 2.5s linear 20;
+}
+.loader2{
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   border: 5px solid transparent;
+   border-top-color: red;
+   border-bottom-color: red;
+   top: 15px;
+   left: 15px;
+   animation: topon 2.5s linear 20;
+}
+.loader3{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* border: 5px solid red; */
+    /* border-top-color: white;
+    border-bottom-color: white; */
+    top: 25px;
+    left: 25px;
+    background: white;
+}
+@keyframes topin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes topon{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+/* ===================== header_starting  ===================== */
+header{
+    background: url('../rasm/magazina/fitness.header.png') no-repeat center center / cover;
+    background-position: center;
+    padding: 20px 0 400px;
+}
+header .header_top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 18px 0;
+    z-index: 1;
+    background: #334377;
+}
+header .header_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header_nav .list ul, header .header_nav .list{
+    display: flex;
+}
+header .header_nav .list ul{
+    margin: 0;
+}
+header .header_nav .bar, header .header_nav .times{
+    display: none;
+}
+header .header_nav .list ul li a{
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0px 13px;
+}
+header .header_top .header_nav ul li a.active{
+    color:cornflowerblue;
+}
+header .header_top .fitnes h1{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    animation: top 4s infinite;
+} 
+header .header_top .fitnes h1 span{
+    color: #fa7c30;
+    animation: top 4s infinite;
+}
+ @keyframes top{
+    0%{
+        transform: scale(1) ;
+        color: white;
+    }
+    25%{
+        transform: scale(1.1);
+        color: green;
+    }
+    50%{
+        transform: scale(1.2);
+        color: blue;
+    }
+    75%{
+        transform: scale(1.1) ;
+        color: yellow;
+    }
+    100%{
+        transform: scale(1) ;
+        color: white;
+    }
+} 
+header .header_main h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 70px;
+    margin-bottom: 30px;
+    margin-top: 180px;
+}
+header .header_main h1 span{
+    color: #fa7c30;
+}
+header .header_main p{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    margin-bottom: 70px;
+}
+button{
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    background: #fa7c30;
+    text-transform: uppercase;
+    border: none; 
+    padding: 18px 27px 18px 27px;
+}
+header .header_top .navbar-toggler{
+   background: #f1f4f6;
+    
+}
+/* ==================== main_starting  ================ */
+main{
+   background: #f1f4f6;
+   padding-bottom: 100px;
+}
+main .col-lg-8{
+    background: white;
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: -210px;
+}
+main .col-lg-4{
+    padding: 0;
+    margin-top: -210px;
+}
+main .col-lg-4 img{
+    height: 550px;
+}
+main .col-lg-8 p{
+    font-size: 26px;
+    font-weight: 700;
+    color: #161418;
+    margin: 0;
+    text-align: center;
+    line-height: 26px;
+}
+main .col-lg-8 h1{
+    font-size: 36px;
+    font-weight: 700;
+    color: #161418;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 36px;
+    margin-top: 30px;
+    margin-bottom: 83px;
+}
+main input{
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+}
+main .icon{
+    position: relative; 
+    width: 47%;
+} 
+main .icon label{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    font-size: 18px;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+} 
+main input:focus~label,
+main input:valid~label{
+    top: -12px;
+    font-size: 14px;
+    color: cornflowerblue;
+    font-weight: bold;
+}
+main input:focus,
+main input:valid{
+    border-bottom: 3px solid cornflowerblue;
+}
+main button{
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    background: #fa7c30;
+    text-transform: uppercase;
+    border: none;
+    padding: 18px 27px 18px 27px;
+}
+main .col-lg-8 .col-lg-12{
+    padding: 0;
+}
+main h3{
+    font-size: 36px;
+    font-weight: 700;
+    color: #161418;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+main h3 span{
+    color: #fa7c30;
+}
+main .col-lg-5 p:nth-of-type(1){
+    font-size: 14px;
+    font-weight: 700;
+    color: #161418;
+    margin: 0;
+    line-height: 29px;
+    margin-bottom: 20px;
+}
+main .col-lg-5 p:nth-of-type(2){
+    font-size: 14px;
+    font-weight: 700;
+    color: #8a8b8d;
+    margin: 0;
+    line-height: 29px;
+    margin-bottom: 15px;
+}
+main .col-lg-5{
+    margin-top: 250px;
+}
+main .col-lg-6{
+    margin-top: 105px;
+}
+/* ================== card_starting ======================= */
+.cardd{
+    background: white;
+    padding: 80px 0 80px;
+}
+.cardd__h1{
+    font-size: 36px;
+    font-weight: 700;
+    color: #161418;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+.cardd__h1 span{
+    color: #fa7c30;
+}
+.cardd__p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #161418;
+    margin: 0;
+    line-height: 14px;
+    margin-bottom: 50px;
+}
+.cardd .card .card-body{
+    background: #f1f4f6;
+}
+.cardd .card .card-body .card-title{
+    font-size: 26px;
+    font-weight: 700;
+    color: #161418;
+    margin: 0;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+.cardd .card .card-body .card-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #161418;
+    margin: 0;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+.cardd .card .card-body  .btn{
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    background: #fa7c30;
+    text-transform: uppercase;
+    border: none;
+    padding: 18px 27px 18px 27px;
+}
+/* ================== train_starting ================ */
+.train{
+   background: url('../rasm/magazina/6-rasm.png') no-repeat center center /cover;
+   background-position: center;
+   padding: 190px 0 180px;
+}
+
+.train p{
+    font-size: 36px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 36px;
+    margin-bottom: 35px;
+}
+.train h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 70px;
+    margin-bottom: 50px;
+}
+/* =================== expert_starting ================= */
+.expert{
+    background: #f1f4f6;
+    padding: 80px 0 80px;
+}
+.expert h3{
+    font-size: 26px;
+    font-weight: 700;
+    color: #161418;
+    margin: 0;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 13px;
+}
+.expert .col-lg-4 p:nth-of-type(1){
+    font-size: 14px;
+    font-weight: 700;
+    color: #fa7c30;
+    margin: 0;
+    line-height: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.expert .col-lg-4 p:nth-of-type(2){
+    font-size: 16px;
+    font-weight: 400;
+    color: #161418;
+    margin: 0;
+    line-height: 29px;
+    text-align: center;
+}
+.expert .one img{
+    margin-bottom: 40px;
+}
+.expert .two img{
+    margin-bottom: 65px;
+}
+.expert .three img{
+    margin-bottom: 85px;
+}
+.expert img{
+    margin-top: 70px;
+}
+.expert img{
+    border-radius: 10px;
+    animation: top 4s infinite;
+}
+@keyframes top{
+    0%{
+        transform: scale(0.8) ;
+        box-shadow: 0 0 20px red;
+    }
+    25%{
+        transform: scale(0.9);
+        box-shadow: 0 0 20px green;
+    }
+    50%{
+        transform: scale(1);
+        box-shadow: 0 0 20px blue;
+    }
+    75%{
+        transform: scale(0.9) ;
+        box-shadow: 0 0 20px yellow;
+    }
+    100%{
+        transform: scale(0.8) ;
+        box-shadow: 0 0 20px red;
+    }
+} 
+/* =================== day_starting ================= */
+.day .one{
+    background: url('../rasm/magazina/11-rasm.png') no-repeat center center / cover;
+    background-position: center;
+}
+.day .two{
+    background: url('../rasm/magazina/10-rasm.png') no-repeat center center / cover;
+    background-position: center;
+}
+.day .col-md-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 0;
+    padding: 130px 0 120px;
+}
+.day p{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+.day h1{
+    font-size: 46px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 46px;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+}
+/* =================== footer_starting ============= */
+footer{
+    background: #161418;
+    padding: 80px 0 100px;
+}
+footer h1{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 50px;
+}
+footer h1 span{
+    color: #fa7c30;
+}
+footer p{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    line-height: 28px;
+    margin: 0;
+}
+footer .col-lg-5 p{
+    margin-bottom: 55px;
+}
+footer a{
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+}
+footer a:hover{
+    text-decoration: none;
+}
+footer .icon .fa{
+    color: white;
+    font-size: 20px;
+    margin-left: 17px;
+    transition: 500ms;
+}
+footer .icon .fa:hover{
+    color: #fa7c30;
+}
+footer form input{
+    font-size: 15px;
+    font-weight: 400;
+    color: #cccccc;
+    width: 60%;
+    padding-left: 11px;
+    border: none;
+}
+footer form .sub{
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    width: 40%;
+}
+footer .icon{
+    margin-bottom: 40px;
+}
+footer h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 40px;
+}
+footer .foot p{
+    margin-left: 20px;
+}
+footer .foot img{
+    margin-bottom: 28px;
+}
+footer .col-lg-3 p{
+    margin-top: 20px;
+}
+footer img{
+    transition: 500ms;
+}
+footer img:hover{
+    transform: rotate(360deg);
+    box-shadow: 0 0 25px red;
+}
+footer .image img{
+   width: 70px;
+   height: 70px;
+}
+/* =================== media_starting ========== */
+@media(max-width: 1199px){
+    main h3{
+        font-size: 33px;
+    }    
+    header .header_main h1{
+        font-size: 60px;
+    }
+    main .col-lg-5 p:nth-of-type(2){
+        font-size: 13px;
+    }
+}
+@media(max-width: 991px){
+    header .header_nav ul{
+        position: fixed;
+        top: 0;
+        right: -220px;
+        width: 200px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        background: rgba(0, 0, 0, 0.7);
+
+    }
+    header .header_nav .bar{
+        display: block;
+        color: white;
+        font-size: 24px;
+
+    }
+    header .header_nav .times{
+        display: block;
+        align-self: flex-start;
+        color: white;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    header .header_nav ul li{
+        margin-bottom: 12px;
+    }
+
+    main .col-lg-4 img{
+        height: 430px;
+    }
+    main .col-lg-8{
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    main .col-lg-8 h1{
+        font-size: 32px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+    main button{
+        padding: 12px 20px 12px 20px;
+    }
+    main .col-lg-5{
+        margin-top: 110px;
+    }
+    main .col-lg-6{
+        margin-top: 130px;
+    }
+    main h3{
+        font-size: 30px;
+    }
+    .cardd .col-lg-4{
+        margin: auto;
+    }
+    .cardd .card .card-body .card-text{
+        margin-bottom: 20px;
+    }
+    .cardd__h1, .cardd__p{
+        text-align: center;
+    }
+    .train h1{
+        font-size: 64px;
+    }
+    .expert .col-lg-4{
+        margin: auto;
+    }
+    .day h1{
+        font-size: 38px; 
+    }
+    .day button{
+        padding: 12px 20px 12px 20px;
+    }
+    footer .col-lg-3{
+        margin: auto;
+        margin-top: 30px;
+    }
+    footer h3, footer h1, footer .col-lg-3 p{
+        text-align: center;
+    }
+    footer h1{
+        margin-bottom: 25px;
+    }
+    main .col-lg-8{
+        margin-top: -100px;
+    }
+    main .col-lg-4{
+        margin-top: -100px;
+    }
+   
+ 
+  
+}
+@media(max-width: 767px){
+    main .col-lg-4{
+        margin: auto;
+        margin-top: -100px;
+    }
+    main .col-lg-4 img{
+        height: 350px;
+    }
+    main button{
+        margin-bottom: 40px;
+    }
+    main .col-lg-8{
+        margin-top: 0px;
+    }
+    main{
+        padding-bottom: 40px;
+    }
+    header .header_main h1{
+        font-size: 50px;
+    }
+    header{
+        padding-bottom: 270px; 
+    }
+    main .col-lg-5{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main .col-lg-5 p:nth-of-type(1), main .col-lg-5 p:nth-of-type(2){
+        text-align: center;
+    }
+    .cardd .card-img-top{
+        height: 240px;
+    }
+    .cardd .card .card-body .card-title{
+        margin-bottom: 15px;
+    }
+    .cardd .card .card-body  .btn{
+        padding: 12px 20px 12px 20px;
+    }
+    .cardd .card .card-body .card-text{
+        font-size: 15px;
+    }
+    .train h1{
+        font-size: 50px;
+    }
+    .train{
+        padding: 120px 0 120px;
+    }
+    .expert .three img{
+        margin-bottom: 30px;
+    }
+    .expert .one img{
+        margin-bottom: 20px;
+    }
+    .expert .two img{
+        margin-bottom: 30px;
+    }
+    .expert .col-lg-4 p:nth-of-type(1){
+        margin-bottom: 15px;
+    }
+    footer a{
+        font-size: 12px;
+    }
+    footer form .sub{
+        font-size: 13px;
+        padding: 12px 20px 12px 15px; 
+    }
+    footer .foot img{
+        margin-bottom: 18px;
+    }
+    footer p{
+        font-size: 11px;
+        line-height: 22px;  
+    }
+}
+@media(max-width: 575px){
+  header{
+      padding-bottom: 140px;
+  }
+  header .header_main h1{
+      margin-top: 120px;
+      font-size: 33px;
+      line-height: 40px;
+  }
+  header .header_main p{
+      margin-bottom: 30px;
+  }
+  header button{
+      padding: 12px 20px 12px 20px;
+  }
+  main .icon{
+    width: 100%;
+  } 
+  main form .one{
+      display: flex;
+      flex-direction: column;
+  }
+  main input{
+    margin-bottom: 20px;
+}
+main .icon label{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    font-size: 16px;
+} 
+   main .col-lg-8{
+       margin: auto;
+   }
+   main .col-lg-8 h1, main .col-lg-8 p{
+       font-size: 23px;
+   }
+   main .col-lg-8 h1{
+       margin-bottom: 25px;
+   }
+   main h3{
+       font-size: 26px;
+   }
+   .cardd__h1{
+    font-size: 32px;
+   }
+   .cardd .card .card-body .card-text{
+    line-height: 23px;
+   }
+   .train h1{
+       font-size: 29px;
+       margin-bottom: 15px;
+   }
+   .train p{
+       font-size: 28px;
+       margin-bottom: 20px;
+   }
+   .train{
+       padding: 90px 0 90px
+   }
+   .day h1{
+       font-size: 30px;
+       margin-bottom: 15px;
+   }
+   .day .col-md-6{
+    padding: 90px 0 90px;
+   }
+   footer{
+       padding: 70px 0 70px;
+   }
+
+}

@@ -1,0 +1,760 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.preloader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 800;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+}
+.loader4{
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+.loader{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.loader1, .loader2, .loader3{
+    position: absolute;
+    border: 4px solid transparent;
+    border-radius: 50%;
+}
+.loader1{
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border: 5px solid white;
+   border-top-color: red;
+   border-bottom-color: red;
+   animation: topin 2.5s linear 20;
+}
+.loader2{
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   border: 5px solid transparent;
+   border-top-color: red;
+   border-bottom-color: red;
+   top: 15px;
+   left: 15px;
+   animation: topon 2.5s linear 20;
+}
+.loader3{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* border: 5px solid red; */
+    /* border-top-color: white;
+    border-bottom-color: white; */
+    top: 25px;
+    left: 25px;
+    background: white;
+}
+@keyframes topin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes topon{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+  
+/* =================== header_starting =============== */
+header{
+    background: url('../rasm/frilans/images/header_01.jpg') no-repeat center center / cover;
+    background-position: center;
+    padding-top: 10px;
+    overflow: hidden;
+}
+header .header_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header_nav .list ul, header .header_nav .list{
+    display: flex;
+}
+header .header_nav .list ul{
+    margin: 0;
+}
+header .header_nav .bar, header .header_nav .times{
+    display: none;
+}
+header .header_nav .navbar-brand{
+    font-size: 43px;
+    line-height: 40px;
+    font-weight: 700;
+    color: blue;
+}
+header .header_nav .list ul li a{
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 18px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+header .header_nav .list ul li a.active{
+    color: red;
+    border-bottom: 3px solid red;
+    padding-top: 4px;
+}
+header .header_top{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 2;
+    padding: 10px 0;
+    transition: 0.5s;
+}
+header .header_top:hover{
+    box-shadow: 0 0 20px black;
+    color: aqua;
+}
+header .header_main h1{
+    text-align: center;
+    font-size: 110px;
+    line-height: 110px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    box-shadow: 0 0 30px black;
+}
+header .header_main h2{
+    text-align: center;
+    font-size: 100px;
+    line-height: 100px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    margin-top: 120px;
+}
+header .header_main h3{
+    text-align: center;
+    font-size: 90px;
+    line-height: 91px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    margin-bottom: 50px;
+}
+header .header_main button{
+    display: block;
+    margin: auto;
+    font-size: 21px;
+    font-weight: 700;
+    color: #242424;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    padding: 15px;
+    pointer-events: none;
+}
+header .header_main .col-lg-6 img{
+    animation: infinite img 4s;
+}
+@keyframes img{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    75%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* ======================== read_starting ================== */
+.read{
+   position: relative;
+   padding: 100px 0 100px;
+}
+.read .one {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    z-index: -1;
+}
+.read h1{
+    font-size: 54px;
+    font-weight: 800;
+    color: #494949;
+    margin: 0;
+    line-height: 55px;
+    margin-bottom: 60px;
+}
+.read p{
+    font-size: 17px;
+    font-weight: 400;
+    color: #6a6a6a;
+    margin: 0;
+    margin-bottom: 60px;
+    line-height: 24px;
+}
+.read__but{
+    font-size: 21px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: #bc2e3a;
+    border-radius: 40px;
+    padding: 18px 20px 18px 20px;
+    border: none;
+}
+/* ========================= main_starting ================= */
+main{
+    background: #f5f5f5;
+    position: relative;
+    padding-top: 95px;
+    padding-bottom: 80px;
+}
+main .fa{
+    background: #bc2e3a;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+}
+main h1{
+    font-size: 55px;
+    font-weight: 800;
+    color: #494949;
+    margin: 0; 
+    text-align: center;
+    margin-bottom: 70px;
+}
+main h3{
+    font-size: 30px;
+    font-weight: 600;
+    color: #6f6f6e;
+    margin: 0;
+    margin-bottom: 25px;
+}
+main p{
+    font-size: 17px;
+    font-weight: 400;
+    color: #6a6a6a;
+    margin: 0 ;
+}
+main .col-lg-4{
+    margin-bottom: 90px;
+}
+main .col-lg-1{
+    position: absolute;
+    padding: 0;
+    left: 0;
+    top: 35%;
+}
+main .col-lg-1 img{
+    animation: infinite one 2s;
+}
+@keyframes  one{
+    0%{
+        transform: translateY(0);
+       
+    }
+    25%{
+        transform: translateY(-15px);
+     
+    }
+    50%{
+        transform: translateY(25px);
+     
+    }
+    75%{
+        transform: translateY(15px);
+      
+    }
+    100%{
+        transform: translateY(0);
+      
+    }
+}
+/* ===================== work_starting =============== */
+.work{
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 150px;
+}
+.work .one{
+    position: absolute;
+    top: -38%;
+    right: 0;
+    padding: 0;
+}
+.work .two{
+    z-index: 1;
+    margin-top: 105px;
+}
+.work .three{
+    z-index: 1;
+    margin-top: 105px;
+}
+.work h1{
+    font-size: 43px;
+    line-height: 46px;
+    font-weight: 800;
+    color: #494949;
+    margin: 0;
+    margin-bottom: 70px;
+}
+.work p{
+    font-size: 17px;
+    font-weight: 400;
+    color: #6a6a6a;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.work .one img{
+    animation: infinite three 8s;
+}
+.work .three img, .work .two img{
+    /* animation: infinite three 4s; */
+}
+@keyframes  three{
+    0%{
+        transform: translateY(0);
+       
+    }
+    25%{
+        transform: translateY(-15px);
+     
+    }
+    50%{
+        transform: translateY(25px);
+     
+    }
+    75%{
+        transform: translateY(15px);
+      
+    }
+    100%{
+        transform: translateY(0);
+      
+    }
+}
+/* =========================== team_starting ============= */
+.team{
+    position: relative;
+    background: #f5f5f5;
+    padding: 100px 0 100px;
+    /* z-index: -1; */
+}
+
+.team .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.team .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+
+}
+.team .col-lg-2{
+    position: absolute;
+    left: 0;
+    top: -65%;
+    padding: 0;
+}
+.team h1{
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    color: #494949;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.team h3{
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    background: #252525;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    margin-top: -40px;
+    border-radius: 40px;
+}
+.team p{
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    background: #bc2e3a;
+    font-style: italic; 
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    border-radius: 40px;
+}
+.say .one img{
+    /* animation: infinite two 8s; */
+}
+@keyframes  two{
+    0%{
+        transform: scale(0.6) rotate(0deg);
+       
+    }
+    25%{
+        transform: scale(0.8) rotate(360deg);
+     
+    }
+    50%{
+        transform: scale(0.9) rotate(0deg);
+     
+    }
+    75%{
+        transform: scale(0.8) rotate(360deg);
+      
+    }
+    100%{
+        transform: scale(0.6) rotate(0deg);
+      
+    }
+}
+/* ==================== say_starting ----------------------- */
+.say{
+    position: relative;
+    padding-top: 100px;
+}
+.say h1{
+    font-size: 50px;
+    font-weight: 800;
+    color: #494949;
+    margin: 0;
+    margin-bottom: 50px;
+}
+.say p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #6a6a6a;
+    margin: 0;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+.say h3{
+    font-size: 18px;
+    font-weight: 700;
+    color: #6a6a6a;
+    margin: 0;
+    margin-bottom: 50px;
+}
+.say .col-lg-2{
+    position: absolute;
+    right: 0;
+    top: -91%;  
+    padding: 0;
+    z-index: -1;
+}
+.say .img{
+    position: absolute;
+    left: 0;
+    top: -20%;  
+    padding: 0;
+    z-index: -1;
+}
+/* ======================== footer_starting =================== */
+footer{
+    background: url('../rasm/frilans/images/footer.png') no-repeat center center / cover;
+    background-position: center;
+    padding: 100px 0 100px;
+    position: relative;
+    z-index: -1;
+}
+footer .col-lg-6{
+    margin: auto;
+}
+footer h1{
+    font-size: 50px;
+    font-weight: 800;
+    color: #9f9f9f;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 70px;
+}
+footer h3{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    margin-bottom: 20px;
+}
+footer a{
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+footer a:hover{
+    text-decoration: none;
+}
+footer .col-lg-3 .fa{
+    color: white;
+    font-size: 35px;
+    margin-right: 25px;
+}
+footer .col-lg-6 .fa{
+    color: white;
+    font-size: 25px;
+}
+footer .col-lg-6{
+    margin-top: 100px;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+footer .col-lg-2{
+    position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+/* ============================= media_starting ==================== */
+@media(max-width: 1199px){
+  
+    header .header_main h2{
+        font-size: 80px;
+    }
+    header .header_main h1{
+        font-size: 90px;
+    }
+    header .header_main h3{
+        font-size: 70px;
+    }
+    .read h1{
+        font-size: 47px;
+    }
+    .work h1{
+        font-size: 38px;
+    }
+    header{
+        padding-bottom: 40px;
+    }
+}
+@media(max-width: 991px){
+    header .header_nav ul{
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 180px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        background: cadetblue;
+
+    }
+    header .header_nav .bar{
+        display: block;
+        color: white;
+        font-size: 24px;
+
+    }
+    header .header_nav .times{
+        display: block;
+        align-self: flex-start;
+        color: white;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    header .header_nav ul li{
+        margin-bottom: 12px;
+    }
+    header .header_nav .list ul li a{
+        margin-left: 0px;
+    }
+    header .header_main h2{
+        font-size: 60px;
+    }
+    header .header_main h1{
+        font-size: 70px;
+    }
+    header .header_main h3{
+        font-size: 50px;
+    }
+    header .header_main img{
+        margin-top: 60px;
+    }
+    .read .two img{
+        margin-top: 60px;
+    }
+    .team .swiper-slide {
+        width: 250px;
+        height: 250px;
+    }
+    .say{
+        padding-bottom: 40px;
+    }
+    .team h3{
+        width: 60%;
+    }
+}
+@media(max-width: 767px){
+    .read h1{
+        font-size: 43px;
+        margin-bottom: 30px;
+    }
+    .read p{
+        margin-bottom: 30px;
+    }
+    .read__but{
+        font-size: 18px;
+    }
+    main h1{
+        font-size: 50px;
+    }
+    main .col-lg-4{
+        margin: auto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    main .col-lg-4 .fa{
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .work h1{
+        margin-bottom: 30px;
+    }
+    .work{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .team h1{
+        font-size: 42px;
+    }
+    .team .swiper-slide {
+        width: 200px;
+        height: 200px;
+    }
+    .team h3{
+        font-size: 18px;
+    }
+    .team p{
+        font-size: 17px;
+    }
+    .say h1{
+        font-size: 42px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .say p{
+        font-size: 18px;
+    }
+    footer .col-lg-3{
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    footer .col-lg-6{
+        margin-top: 50px;
+    }
+    footer h1{
+        font-size: 45px;
+    }
+
+}
+@media(max-width: 575px){
+    .team .swiper-slide {
+        width: 150px;
+        height: 150px;
+    }
+    .team h3{
+        font-size: 16px;
+        width: 80%;
+    }
+    .team h1{
+        font-size: 38px;
+    }
+    .team p{
+        font-size: 15px;
+        width: 60%;
+        padding: 5px;
+    }
+    header .header_main h2{
+        margin-top: 80px;
+    }
+    header .header_main button{
+        font-size: 18px;
+        padding: 10px;
+    }
+    header .header_main h2{
+        font-size: 52px;
+    }
+    header .header_main h1{
+        font-size: 62px;
+    }
+    header .header_main h3{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    header .header_top .navbar-brand{
+        font-size: 35px;
+    }
+    .read__but{
+        font-size: 16px;
+        padding: 14px 15px 14px 15px
+    }
+    .read h1{
+        font-size: 40px;
+    }
+    main h1{
+        font-size: 42px;
+    }
+    .work h1{
+        font-size: 28px;
+    }
+    .say h1{
+        font-size: 38px;
+    }
+    .work{
+        padding: 65px 0 65px;
+    }
+    footer .col-lg-3{
+        display: flex;
+        justify-content: center;
+    }
+    footer .col-lg-6{
+        border-bottom: 0;
+        margin: auto;
+    }
+}
